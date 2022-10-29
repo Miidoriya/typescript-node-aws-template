@@ -5,8 +5,8 @@ interface Event {
 }
 
 exports.handler = async function (event: Event, context: Context) {
-  console.log(`Hello ${capitalize(event.name)}!`)
+  console.log(`Hello ${capitalize(event.name)}!`);
 };
 
 // Uncomment this line to work with lambda locally
-// exports.handler({name: "marcus"})
+// git exports.handler({name: "marcus"})

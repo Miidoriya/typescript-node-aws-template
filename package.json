@@ -1,0 +1,24 @@
+{
+  "name": "typescript-node-aws-template",
+  "version": "1.0.0",
+  "description": "A simple template repository for running transpiled typescript node.js code as an AWS lambda (Full example included) ",
+  "main": "index.js",
+  "repository": "https://github.com/Miidoriya/typescript-node-aws-template",
+  "author": "Miidoriya",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "npm run build && node build/index.js",
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
+}

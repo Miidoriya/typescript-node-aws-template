@@ -10,7 +10,7 @@ You'll need the following installed:
 
 For aws/awscli ensure you have a default profile setup locally configured to your secret write key and account in aws
 
-The easiest way to get setup is to install the above via a package manager
+The easiest way to get setup is to install the above via a package manager  
 **Mac**:
 ```
 // install homebrew  

@@ -8,15 +8,6 @@ You'll need the following installed:
 - awscli (this is necessary as you'll need to be configured against a valid aws account/profile)
 
 The easiest way to get setup is to install the above via a package manager
-
-## Package Commands
-The package.json file wraps some useful commands as part of this template.
-
-These commands are as follows:
-- `yarn build` - Build the .ts files and transpile them into a .js file in build/ (Command used as part of  `yarn start`)
-- `yarn start` - Build and run the index file at build/index.js
-- `yarn start:dev` - start a local compilation which reruns the code in src/index.ts when a change in src/ to a .js or .ts file is recognized. Really good for continuous development
-
 **Mac**:
 ```
 // install homebrew  
@@ -48,6 +39,15 @@ yarn --version // Should return something like below
 node --version // Should return something like below
 v18.11.0
 ```
+
+## Package Commands
+The package.json file wraps some useful commands as part of this template.
+
+These commands are as follows:
+- `yarn build` - Build the .ts files and transpile them into a .js file in build/ (Command used as part of  `yarn start`)
+- `yarn start` - Build and run the index file at build/index.js
+- `yarn start:dev` - start a local compilation which reruns the code in src/index.ts when a change in src/ to a .js or .ts file is recognized. Really good for continuous development
+
 
 ## Resouces
 Initial repository setup: https://khalilstemmler.com/blogs/typescript/node-starter-project/

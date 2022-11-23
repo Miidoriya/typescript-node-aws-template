@@ -15,3 +15,12 @@ module "lambda_function" {
     Name = "hello-world-lambda"
   }
 }
+
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "typescript-node-aws-template-s3-state"
+  
+  # Prevent accidental deletion of this S3 bucket
+  lifecycle {
+    prevent_destroy = true
+  }
+}

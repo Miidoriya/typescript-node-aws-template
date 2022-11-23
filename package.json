@@ -14,7 +14,7 @@
     "start:dev": "nodemon",
     "build": "rimraf ./build && tsc --noEmit && esbuild src/* --bundle --minify --sourcemap --platform=node --target=es2021 --outfile=build/index.js",
     "build:zip": "npm run build && cd build && zip -r index.zip index.js*",
-    "release:terraform": "npm run build:zip && cd infra/examples/typescript-node-lambda && terraform init && terraform apply"
+    "release:terraform": "npm run build:zip && cd infra/examples/typescript-node-lambda && terraform init -upgrade && terraform apply"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.108",

@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Generate the providers.tf file with either the test configuration ( for localstack ) or production
+# ready provider details ( eu-west-2 )
+
+function shared() {
+  cat <<EOF
 terraform {
   required_providers {
     aws = {
@@ -8,6 +15,20 @@ terraform {
 
   required_version = ">= 1.2.0"
 }
+EOF
+}
+
+function prod() {
+  cat <<EOF
+
+provider "aws" {
+  region  = "eu-west-2"
+}
+EOF
+}
+
+function test() {
+  cat <<EOF
 
 provider "aws" {
   access_key                  = "test"
@@ -44,3 +65,14 @@ provider "aws" {
     sts            = "http://localhost:4566"
   }
 }
+EOF
+}
+
+if [ "$1" = "prod" ]
+then
+  shared >  providers.tf
+  prod   >> providers.tf
+else
+  shared >  providers.tf
+  test   >> providers.tf
+fi

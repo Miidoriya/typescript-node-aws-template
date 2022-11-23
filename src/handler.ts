@@ -5,7 +5,11 @@ interface Event {
 }
 
 exports.handler = async function (event: Event, context: Context) {
-  console.log(`Hello ${capitalize(event.name)}!`);
+  const msg = `Hello ${capitalize(event.name)}!`
+  console.log(msg);
+  return {
+    body: msg
+  }
 };
 
 // Uncomment this line to work with lambda locally
